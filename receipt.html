@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    <link rel="stylesheet" href="Inventory.css">
+   
+</head>
+<body>
+    <div class="contaner-fluid">
+
+        <div class="row"> 
+                
+                    <nav class="navbar navbar-light fixed-top bg-light flex-md-nowrap p-0 shadow col">
+                        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Logo Design</a>
+                        <input class="form-control form-control-dark w-100 col" type="text" placeholder="Search" aria-label="Search">
+                        <div>Agent Name</div>
+                        <i class="far fa-user ml-2 text-danger" width="100%"></i>
+                        <ul class="navbar-nav px-3 ">
+                          <li class="nav-item text-nowrap">
+                            <a class="nav-link col" href="#">Sign out</a>
+                          </li>
+                        </ul>
+                       
+                      </nav>
+                   
+        </div>
+                      
+                      
+            <div class="row">
+                          <nav class="col-md-2 d-none d-md-block bg-dark sidebar text-center">
+                            <div class="sidebar-sticky">
+                              <ul class="nav flex-column">
+                                <li class="nav-item">
+                                  <a class="nav-link active" href="#">
+                                    <span data-feather="home"></span>
+                                    Dashboard <span class="sr-only">(current)</span>
+                                  </a>
+                                </li>
+                                <li class="nav-item ">
+                                  <a class="nav-link text-white " href="#" >
+                                    <span data-feather="file"></span>
+                                    Sales
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-white pink" href="receipt.html">
+                                    <span data-feather="shopping-cart"></span>
+                                   Recepit
+                                  </a>
+                                </li>
+                                
+                      
+                              <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1  text-muted">
+                                <span>Admin Access</span>
+                                <a class="d-flex align-items-center text-center text-danger" href="#">
+                                  <span data-feather="plus-circle"></span>
+                                </a>
+                              </h6>
+                              <ul class="nav flex-column mb-2">
+                                <li class="nav-item">
+                                  <a class="nav-link text-white" href="addproduct.html">
+                                    <span data-feather="file-text"></span>
+                                    Product
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-white" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Add Agent
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link text-white" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Settings
+                                  </a>
+                                </li>
+                                
+                              </ul>
+                              <p class="  mt-5 text-muted text-center" style="padding-top: 100%">&copy; LogoDesign2019</p>
+                            </div>
+                          </nav>
+            </div>
+                        
+                        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 "style="padding-bottom: 40px" >
+                            <div  class="alert alert-primary bg-dark text-white" role="alert" style="padding-top: 40px">
+                                A simple primary alert—check it out!
+                              </div>
+                            
+                          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h1 class="h2"> Sales Dashboard</h1>
+                            <div class="btn-toolbar mb-2 mb-md-0">
+                              <div class="btn-group mr-2">
+                                 
+                              </div>
+                              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                <span data-feather="calendar"></span>
+                                Date
+                              </button>
+                            </div>
+                          </div>
+                          <form>
+                              <div class="row">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Customer name">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Customer Phone NO">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Sales Reference NO.">
+                                  </div>
+                              </div>
+                            </form>
+                            <div class="row">
+                              <div class="col mt-4">
+                                  <select class="form-control form-control-lg" > 
+                                      <option>Category</option>
+                                      <option>Ladies Wear</option>
+                                      <option>Mens Wear</option>
+                                      <option>Children Wear</option>
+                                    </select>
+                              </div>
+                            </div>
+                        
+                        <canvas class="my-4 w-100" id="myChart" width="900" height="0"></canvas>
+
+                        <h2>Section title</h2>
+                        <div class="table-responsive ">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Discription</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Unit Price</th>
+                                    <th scope="col">VAT</th>
+                                    <th scope="col">Discount</th>
+                                    
+                                    <th scope="col" > <span> &#8358 </span> Subtotal</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                   
+                                    <td><input type="text" class="form-control"></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                   
+                                    <td><input type="text" class="form-control"></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    <td><input type="text" class="form-control"></td>
+                                    
+                                    <td><input type="text" class="form-control"></td>
+                                  </tr>
+                                 
+                                </tbody>
+                                
+                              </table>
+                              <form> 
+                                  <div class="contaner-fluid">   
+                                    <div class="float-right col-4 ">
+                                        <label><b> <span> &#8358 </span>Total: </b></label>
+                                        <input type="text"  class="form-control " > 
+                                    </div>
+                                </div>
+                                  
+                                        <div class="float-left col-6 mt-5 ">
+                                            <label><b> Total amount in words: </b></label>
+                                            <input type="text"  class="form-control " > 
+                                    
+                                        </div>
+                                        
+                                    </div>
+                            </form>
+                            <div class="col-4 mt-5">
+                                    <button type="button" class="btn btn-success btn-block " onclick="window.print()">Print</button>
+                               
+                            </div>
+                            
+                        </div>
+                        
+
+    </div>
+    
+</body>
+</html>

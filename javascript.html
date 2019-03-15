@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Inventory.css">
+
+
+    <script>
+    
+    function calculate(){
+                var unit= parseInt(document.getElementById('un'). value);
+                // var Vat= parseInt(document.getElementById('vt'). value);
+                var AvailiableQuantity = parseInt(document.getElementById('Aq'). value);
+                var UnitPrice= parseInt(document.getElementById('up'). value); 
+                var newunite= AvailiableQuantity -unit;
+                document.getElementById('Aq'). value= newunite;
+                var Subtotal = unit * UnitPrice;
+                var cvat= (5 * Subtotal) / 100;
+                var result= Subtotal + cvat; 
+                document.getElementById('vt').value= cvat;
+                document.getElementById('total').value= result;
+                
+               
+        }
+    
+    
+    
+    </script>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row mt-4 ml-5">
+        <p>
+            <!-- <b>Total</b> <input type="text" id="total"/> <br> -->
+            <b>subtotal</b> <input type="text" id="total"/> <br>
+            <b>Unit</b> <input type="text" Id="un" onkeyup="calculate()" /><br>
+            <b>Vat</b> <input type="text" Id="vt"/><br>
+            <b>UnitPrice</b> <input type="text" Id="up" value="1000" readonly size="4"/><br>
+            <b>AvailiableQuantity</b> <span> <input type="text" Id="Aq" value="30" readonly size="2"/><br></span>
+            <button type="button" class="btn btn-success" onclick="window.print()" >Print</button>
+
+
+        </p>
+       
+    </div>
+
+</div>
+</body>
+</html>
